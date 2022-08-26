@@ -8,13 +8,17 @@ using namespace std;
 int minIndex(vector<int> arr, int n){
      unordered_map <int,int> mp;
 
+// counting frequency of elements
      for(int i=0;i<n;i++){
-        mp[arr[i]] ++;
+        mp[arr[i]]++;
      }
 
-     for(int i=0;i<n;i++){
-        if(mp.count(arr[i]) > 1)
-          return i;
+// finding min index
+     for(int i=0;i<mp.size();i++){
+        if(mp.count(arr[i]) > 1){
+             return i;
+        }
+
      }
 
      return -1;
@@ -28,7 +32,7 @@ int main()
     cin>>n;
     
     vector<int> arr;
-    cout<<"enter array elemenst"<<endl;
+    cout<<"enter array elements"<<endl;
     for(int i=0;i<n;i++){
         int k;
         cin>>k;

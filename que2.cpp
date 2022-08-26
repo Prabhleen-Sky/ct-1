@@ -15,7 +15,7 @@ int main()
     cin>>n;
     
     vector <int> arr;
-    cout<<"enter array elemenst"<<endl;
+    cout<<"enter array elements"<<endl;
     for(int i=0;i<n;i++){
         int k;
         cin>>k;
@@ -24,6 +24,7 @@ int main()
 
     //logic 
     
+    // sorting arr
     sort(arr.begin(), arr.end());
     
     bool flag = true;
